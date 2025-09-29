@@ -12,42 +12,62 @@
 
 https://app.diagrams.net/
 
-3. Реализация программы
+2. Реализация программы
 
 #include <stdio.h>
+
 #include <math.h>
+
 #include <locale.h>
 
 int main() {
+
     setlocale(LC_CTYPE, "");
+    
     double X;
+    
     double L;
 
     printf("Введите время удержания на воде X (мс): ");
+    
     scanf("%lf", &X);
 
     printf("Введите длину шага L (см): ");
+    
     scanf("%lf", &L);
+    
     double time_seconds = X / 1000.0;
+    
     double step_meters = L / 100.0;
+    
     double min_velocity = step_meters / time_seconds;
+    
     printf("\n--- РЕЗУЛЬТАТЫ ---\n");
+    
     printf("Время удержания на воде: %.2f мс = %.4f с\n", X, time_seconds);
+    
     printf("Длина шага: %.2f см = %.4f м\n", L, step_meters);
+    
     printf("Минимальная скорость: %.4f м/с\n", min_velocity);
 
     return 0;
 }
-5. Результаты работы программы
+
+3. Результаты работы программы
 
 Введите время удержания на воде X (мс): 500
+
 Введите длину шага L (см): 75
 
 --- РЕЗУЛЬТАТЫ ---
+
 Время удержания на воде: 500.00 мс = 0.5000 с
+
 Длина шага: 75.00 см = 0.7500 м
+
 Минимальная скорость: 1.5000 м/с
 
-6. Информация о разработчике
+
+4. Информация о разработчике
 
 Лычагин Антон бИЦ-252
